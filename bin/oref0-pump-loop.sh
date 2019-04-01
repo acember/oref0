@@ -87,6 +87,8 @@ function timerun {
 
 function fail {
     echo -n "oref0-pump-loop failed. "
+    #acember 4/1/2019
+    grep incorrectly enact/suggested.json && oref0-set-system-clock 2>&3
     if find enact/ -mmin -5 | grep smb-suggested.json >&4 && grep "too old" enact/smb-suggested.json >&4; then
         touch /tmp/pump_loop_completed
         wait_for_bg
